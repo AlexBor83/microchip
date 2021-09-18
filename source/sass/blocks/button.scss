@@ -1,0 +1,23 @@
+.button {
+  font-family: $font-family--Roboto_Condensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $wight;
+  background-color: transparent;
+  padding: 0;
+  height: 45px;
+  border: 1px solid $wight;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+ }
