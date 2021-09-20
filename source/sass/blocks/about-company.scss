@@ -1,0 +1,55 @@
+.about-company {
+  padding-left: 180px;
+  position: relative;
+
+  @media (max-width: $desktop-width) {
+    padding-left: 200px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../img/date_desktop.png);
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 317px;
+    left: 0;
+
+    @media (max-width: $desktop-width) {
+      background-image: url(../img/date_tablet.png);
+      width: 251px;
+      height: 362px;
+    }
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.about-company__title {
+  font-family: $font-family--Roboto_Condensed;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.about-company__text {
+  padding-top: 0;
+}
+
+.about-company__button {
+  color: $blue;
+  border: 1px solid $blue;
+  height: 45px;
+  display: flex;
+  width: 180px;
+  justify-content: center;
+  align-items: center;
+}
