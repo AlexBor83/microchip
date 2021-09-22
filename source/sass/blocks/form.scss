@@ -1,0 +1,172 @@
+.form {
+  background-color: $blue;
+  background-image: url(../img/background_form_desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+
+  @media (min-resolution: $retina-dpi-2) {
+    background-image: url(../img/background_form_desktop@2.jpg);
+  }
+
+  @media (max-width: $desktop-width) {
+    background-image: none;
+  }
+}
+
+.form form {
+  width: 570px;
+  color: $wight;
+  margin-left: auto;
+  position: relative;
+
+  @media (max-width: $desktop-width) {
+    width: 590px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../../img/paper_airplane.svg);
+    background-repeat: no-repeat;
+    width: 511px;
+    height: 290px;
+    top: 70px;
+    left: -600px;
+
+    @media (max-width: $desktop-width) {
+      content: none;
+    }
+  }
+}
+
+.form__title {
+  font-family: $font-family--Roboto_Condensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0;
+  margin-bottom: 7px;
+
+  @media (max-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.form__text {
+  margin: 0;
+  margin-bottom: 49px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.form__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.form__item {
+  &--textarea {
+    grid-column: 1 / 3;
+
+    @media (max-width: $tablet-width) {
+      grid-column: 1/2;
+    }
+  }
+}
+
+.form__item input,
+.form__item textarea {
+  width: 100%;
+  background-color: $bluelight;
+  border: none;
+  padding-left: 16px;
+  color: $wight;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 22px;
+    color: $wight;
+    opacity: 1;
+    padding-bottom: 16px;
+    font-family: $font-family--PT_Mono;
+  }
+}
+
+.form__item input {
+  height: 50px;
+}
+
+.form__item textarea {
+  min-height: 154px;
+  padding-top: 16px;
+}
+
+.form__button {
+  width: 100%;
+}
+
+.form__checkbox {
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 20px;
+  display: block;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.checkbox__check {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $wight;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  left: 0px;
+
+}
+
+.checkbox__check svg {
+  stroke: $wight;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  stroke: transparent;
+}
+
+.form__checkbox input {
+  display: none;
+}
+
+.form__checkbox input:checked + .checkbox__check svg {
+  stroke: $wight;
+}
