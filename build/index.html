@@ -212,7 +212,7 @@
       </div>
     </section>
 
-    <div class="form">
+    <div class="form form--section">
       <div class="container container__form">
         <form action="https://echo.htmlacademy.ru" method="POST">
           <h2 class="form__title">
@@ -221,7 +221,6 @@
           <p class="form__text">
             Мы проконсультируем Вас бесплатно
           </p>
-
           <ul class="form__list">
             <li class="form__item">
               <input type="text" name="text" required="" placeholder="Имя" aria-label="Введите Ваше Имя">
@@ -241,7 +240,7 @@
             <li class="form__item form__item--checkbox">
               <label class="form__checkbox">
                 <input type="checkbox" checked="checked" name="data" required="">
-                <span class="checkbox__check">
+                <span class="form__check">
                   <svg width="10" height="10" aria-hidden="true">
                     <use xlink:href="img/sprite_auto.svg#icon_check"></use>
                   </svg>
@@ -391,56 +390,51 @@
     </div>
   </footer>
 
-
-
-
-  <section class="modal-form">
-
-      <form action="https://echo.htmlacademy.ru" method="POST">
-        <h2 class="modal-form__title">
-          Закажите звонок
-        </h2>
-        <p class="modal-form__text">
-          Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
-        </p>
-        <ul class="modal-form__list">
-          <li class="modal-form__item">
-            <input type="text" name="text" required="" placeholder="Имя" aria-label="Введите Ваше Имя">
-          </li>
-          <li class="modal-form__item">
-            <input type="tel" name="tel" required="" placeholder="Телефон" aria-label="Введите Ваш номер телефона">
-          </li>
-
-          <li class="modal-form__item modal-form__item--textarea">
-            <textarea name="subject" placeholder="Ваш вопрос"></textarea>
-          </li>
-          <li class="modal-form__item">
-            <button class="button modal-form__button" type="submit" aria-label="Отправить форму">
-              Отправить
-            </button>
-          </li>
-          <li class="modal-form__item form__item--checkbox">
-            <label class="modal-form__checkbox">
-              <input type="checkbox" checked="checked" name="data" required="">
-              <span class="modal-form__check">
-                <svg width="10" height="10" aria-hidden="true">
-                  <use xlink:href="img/sprite_auto.svg#icon_check"></use>
-                </svg>
-              </span>
-              Я согласен на обработку персональных данных
-            </label>
-          </li>
-        </ul>
-      </form>
-      <button class="modal__button" aria-label="открыть/закрыть модальное окно" type="button"></button>
-
-
-
+  <section class="form form--modal">
+    <form action="https://echo.htmlacademy.ru" method="POST">
+      <h2 class="form__title form__title--modal">
+        Закажите звонок
+      </h2>
+      <p class="form__text form__text--modal">
+        Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+      </p>
+      <ul class="form__list form__list--modal">
+        <li class="form__item">
+          <input type="text" name="text" required="" placeholder="Имя" aria-label="Введите Ваше Имя">
+        </li>
+        <li class="form__item">
+          <input type="tel" name="tel" required="" placeholder="Телефон" aria-label="Введите Ваш номер телефона">
+        </li>
+        <li class="form__item form__item--modal-textarea">
+          <textarea name="subject" placeholder="Ваш вопрос"></textarea>
+        </li>
+        <li class="form__item">
+          <button class="button form__button" type="submit" aria-label="Отправить форму">
+            Отправить
+          </button>
+        </li>
+        <li class="form__item form__item--checkbox">
+          <label class="form__checkbox form__checkbox--modal">
+            <input type="checkbox" checked="checked" name="data" required="">
+            <span class="form__check">
+              <svg width="10" height="10" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon_check"></use>
+              </svg>
+            </span>
+            Я согласен на обработку персональных данных
+          </label>
+      </li></ul>
+    </form>
+    <button class="form__button form__button--modal" aria-label="открыть/закрыть модальное окно" type="button"></button>
   </section>
 
+  <!-- <script>
+    const buttonForm = document.querySelector('.header__button')
+
+
+
+  </script> -->
 
 </body>
-
-
 
 </html>

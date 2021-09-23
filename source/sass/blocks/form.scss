@@ -1,20 +1,43 @@
 .form {
   background-color: $blue;
-  background-image: url(../img/background_form_desktop.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 0;
 
-  @media (min-resolution: $retina-dpi-2) {
-    background-image: url(../img/background_form_desktop@2.jpg);
+  &--section {
+    background-image: url(../img/background_form_desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+
+    @media (min-resolution: $retina-dpi-2) {
+      background-image: url(../img/background_form_desktop@2.jpg);
+    }
+    @media (max-width: $desktop-width) {
+      background-image: none;
+    }
   }
 
-  @media (max-width: $desktop-width) {
-    background-image: none;
+  &--modal {
+    width: 50%;
+    padding: 33px 39px;
+    color: $wight;
+    margin: 0 auto;
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    //display: none;
+    z-index: 20;
+
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
   }
 }
 
-.form form {
+.form--modal-show {
+  display: block;
+}
+
+.form--section form {
   width: 570px;
   color: $wight;
   margin-left: auto;
@@ -62,6 +85,12 @@
     font-size: 28px;
     line-height: 39px;
   }
+
+  &--modal {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 20px;
+  }
 }
 
 .form__text {
@@ -69,6 +98,11 @@
   margin-bottom: 49px;
 
   @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  &--modal {
+    width: 380px;
     margin-bottom: 20px;
   }
 }
@@ -84,9 +118,14 @@
   @media (max-width: $tablet-width) {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  &--modal {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .form__item {
+
   &--textarea {
     grid-column: 1 / 3;
 
@@ -123,6 +162,10 @@
   padding-top: 16px;
 }
 
+.form__item--modal-textarea textarea{
+  min-height: 104px;
+}
+
 .form__button {
   width: 100%;
 }
@@ -133,8 +176,11 @@
   line-height: 16px;
   padding-left: 20px;
   display: block;
-  opacity: 0.8;
   cursor: pointer;
+
+  &--modal {
+    width: 330px;
+  }
 
   &:hover,
   &:focus {
@@ -142,7 +188,7 @@
   }
 }
 
-.checkbox__check {
+.form__check {
   position: absolute;
   width: 16px;
   height: 16px;
@@ -151,10 +197,9 @@
   vertical-align: middle;
   margin-right: 5px;
   left: 0px;
-
 }
 
-.checkbox__check svg {
+.form__check svg {
   stroke: $wight;
   position: absolute;
   left: 50%;
@@ -167,6 +212,39 @@
   display: none;
 }
 
-.form__checkbox input:checked + .checkbox__check svg {
+.form__checkbox input:checked + .form__check svg {
   stroke: $wight;
+}
+
+.form__button {
+  &--modal {
+    display: block;
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $wight;
+      width: 16px;
+      height: 1px;
+      top: 10px;
+      right: 6px;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
 }
