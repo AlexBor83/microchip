@@ -174,7 +174,6 @@
                 <img src="img/make_desktop.jpg" srcset="img/make_desktop@2.jpg" alt="Фото печатной платы" width="370"
                   height="620">
               </picture>
-
             </a>
           </li>
           <li class="production__item">
@@ -215,7 +214,6 @@
                 <img src="img/components_desktop.jpg" srcset="img/components_desktop@2.jpg" alt="Фото световой ленты"
                   width="370" height="620">
               </picture>
-
             </a>
           </li>
         </ul>
@@ -302,11 +300,11 @@
             </ul>
           </div>
         </section>
-        <section class="footer__navigation navigation">
-          <h3 class="navigation__title">
+        <section class="footer__section footer__navigation navigation">
+          <h3 class="footer__title navigation__title">
             Разделы сайта
           </h3>
-          <ul class="navigation__list">
+          <ul class="footer__list navigation__list open-menu">
             <li>
               <ul class="navigation__wrap">
                 <li class="navigation__item">
@@ -332,7 +330,7 @@
               </ul>
             </li>
             <li>
-              <ul class="navigation__wrap">
+              <ul class=" navigation__wrap">
                 <li class="navigation__item">
                   <a class="navigation__link" href="#" aria-label="ссылка на разделы сайта">
                     Комплектующие
@@ -354,11 +352,11 @@
           <button class="footer__button footer__button--navigation" aria-label="открыть/закрыть сисок"
             type="button"></button>
         </section>
-        <section class="footer__adress adress">
-          <h3 class="adress__title">
+        <section class="footer__section footer__adress adress">
+          <h3 class="footer__title adress__title">
             Наш офис
           </h3>
-          <ul class="adress__list">
+          <ul class="footer__list adress__list open-menu">
             <li class="adress__item">
               <address class="address__text">
                 г. Мытищи, Олимпийский проспект, д.10
@@ -403,50 +401,50 @@
     </div>
   </footer>
 
-  <section class="form form--modal">
-    <form action="https://echo.htmlacademy.ru" method="POST">
-      <h2 class="form__title form__title--modal">
-        Закажите звонок
-      </h2>
-      <p class="form__text form__text--modal">
-        Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
-      </p>
-      <ul class="form__list form__list--modal">
-        <li class="form__item">
-          <input type="text" name="text" required placeholder="Имя" aria-label="Введите Ваше Имя">
-        </li>
-        <li class="form__item">
-          <input type="tel" name="tel" required placeholder="Телефон" aria-label="Введите Ваш номер телефона">
-        </li>
-        <li class="form__item form__item--modal-textarea">
-          <textarea name="subject" placeholder="Ваш вопрос"></textarea>
-        </li>
-        <li class="form__item">
-          <button class="button form__button" type="submit" aria-label="Отправить форму">
-            Отправить
-          </button>
-        </li>
-        <li class="form__item form__item--checkbox">
-          <label class="form__checkbox form__checkbox--modal">
-            <input type="checkbox" checked="checked" name="data" required>
-            <span class="form__check">
-              <svg width="10" height="10" aria-hidden="true">
-                <use xlink:href="img/sprite_auto.svg#icon_check"></use>
-              </svg>
-            </span>
-            Я согласен на обработку персональных данных
-          </label>
-      </ul>
-    </form>
-    <button class="form__button form__button--modal" aria-label="открыть/закрыть модальное окно" type="button"></button>
-  </section>
+  <div class="wrap">
+    <section class="form form--modal form--modal-closed">
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <h2 class="form__title form__title--modal">
+          Закажите звонок
+        </h2>
+        <p class="form__text form__text--modal">
+          Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+        </p>
+        <ul class="form__list form__list--modal">
+          <li class="form__item">
+            <input type="text" name="text" required placeholder="Имя" aria-label="Введите Ваше Имя">
+          </li>
+          <li class="form__item">
+            <input type="tel" name="tel" required placeholder="Телефон" aria-label="Введите Ваш номер телефона">
+          </li>
+          <li class="form__item form__item--modal-textarea">
+            <textarea name="subject" placeholder="Ваш вопрос"></textarea>
+          </li>
+          <li class="form__item">
+            <button class="button form__button" type="submit" aria-label="Отправить форму">
+              Отправить
+            </button>
+          </li>
+          <li class="form__item form__item--checkbox">
+            <label class="form__checkbox form__checkbox--modal">
+              <input type="checkbox" checked="checked" name="data" required>
+              <span class="form__check">
+                <svg width="10" height="10" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#icon_check"></use>
+                </svg>
+              </span>
+              Я согласен на обработку персональных данных
+            </label>
+        </ul>
+      </form>
+      <button class="form__button form__button--modal" aria-label="открыть/закрыть модальное окно"
+        type="button"></button>
+    </section>
+  </div>
 
-  <!-- <script>
-    const buttonForm = document.querySelector('.header__button')
 
+  <script src="js/script.js" type="module"></script>
 
-
-  </script> -->
 
 </body>
 

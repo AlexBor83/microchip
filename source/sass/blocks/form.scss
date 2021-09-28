@@ -24,7 +24,6 @@
     left: 50%;
     top: 40%;
     transform: translate(-50%, -50%);
-    //display: none;
     z-index: 20;
 
     @media (max-width: $desktop-width) {
@@ -33,8 +32,17 @@
   }
 }
 
+.form--modal-closed {
+  display: none;
+}
+
 .form--modal-show {
   display: block;
+}
+
+.fixed-page {
+  z-index: 15;
+  overflow: hidden;
 }
 
 .form--section form {
