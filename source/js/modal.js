@@ -31,6 +31,8 @@ const togglerModal = () => {
         }
       });
 
+      //Не понял как сделать чтоб модалка закрывалась по клику на пустое место
+
       // window.addEventListener('click', (evt) => {
 
       //   if (evt.target == modal) {
@@ -49,7 +51,3 @@ const togglerModal = () => {
 };
 
 togglerModal();
-
-// console.log('1');
-
-

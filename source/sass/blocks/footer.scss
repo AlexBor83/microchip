@@ -13,7 +13,7 @@
     bottom: 60px;
 
     @media (max-width: $tablet-width) {
-      bottom: 50px;
+      bottom: 83px;
     }
   }
 
@@ -27,7 +27,6 @@
 
     @media (max-width: $tablet-width) {
       top: 200px;
-
       box-shadow: 0 300px 0 0 $grey;
     }
   }
@@ -48,7 +47,6 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
 
 .footer__business-card {
   @media (max-width: $desktop-width) {
@@ -98,7 +96,7 @@
     position: absolute;
     background-color: transparent;
     cursor: pointer;
-    top: 0;
+    top: -5px;
     right: 0;
     padding: 0;
 
@@ -114,11 +112,36 @@
       right: 6px;
     }
 
+    &:hover,
+    &:focus {
+      background-color: $grey;
+      opacity: 0.1;
+    }
+
+  }
+}
+
+.footer__button--clouse {
+
+  @media (max-width: $tablet-width) {
+
     &::after {
       transform: rotate(90deg);
     }
   }
+
 }
+
+.footer__button:focus.footer__title,
+.footer__button:hover .footer__title {
+  color: red;
+}
+
+
+
+
+
+
 
 .footer__bottom {
   padding: 20px 0;
