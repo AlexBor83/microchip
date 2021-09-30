@@ -66,7 +66,8 @@
         <a class="button intro__button" href="#formSection" aria-label="Кнопка для получения бесплатной консультаци">
           Получить бесплатную консультацию
         </a>
-        <a class="button intro__button intro__button--mobile" href="#formSection" aria-label="Кнопка для получения бесплатной консультаци">
+        <a class="button intro__button intro__button--mobile" href="#formSection"
+          aria-label="Кнопка для получения бесплатной консультаци">
           Бесплатная консультация
         </a>
       </section>
@@ -161,14 +162,17 @@
                 Производство печатных плат
               </p>
               <picture>
-                <source media="(max-width: 767px)" type="image/webp" srcset="img/make_mobile.webp, img/make_mobile@2.webp 2x">
-                <source media="(max-width: 1023px)" type="image/webp" srcset="img/make_tablet.webp, img/make_tablet@2.webp 2x">
+                <source media="(max-width: 767px)" type="image/webp"
+                  srcset="img/make_mobile.webp, img/make_mobile@2.webp 2x">
+                <source media="(max-width: 1023px)" type="image/webp"
+                  srcset="img/make_tablet.webp, img/make_tablet@2.webp 2x">
                 <source type="image/webp" srcset="img/make_desktop.webp, img/make_desktop@2.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/make_mobile.jpg, img/make_mobile@2.jpg 2x">
                 <source media="(max-width: 1023px)" srcset="img/make_tablet.jpg, img/make_tablet@2.jpg 2x">
 
                 <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/make_desktop.jpg" srcset="img/make_desktop@2.jpg" alt="Фото печатной платы" width="370" height="620">
+                <img src="img/make_desktop.jpg" srcset="img/make_desktop@2.jpg" alt="Фото печатной платы" width="370"
+                  height="620">
               </picture>
             </a>
           </li>
@@ -178,14 +182,17 @@
                 Монтаж печатных плат
               </p>
               <picture>
-                <source media="(max-width: 767px)" type="image/webp" srcset="img/montage_mobile.webp, img/montage_mobile@2.webp  2x">
-                <source media="(max-width: 1023px)" type="image/webp" srcset="img/montage_tablet.webp, img/montage_tablet@2.webp  2x">
+                <source media="(max-width: 767px)" type="image/webp"
+                  srcset="img/montage_mobile.webp, img/montage_mobile@2.webp  2x">
+                <source media="(max-width: 1023px)" type="image/webp"
+                  srcset="img/montage_tablet.webp, img/montage_tablet@2.webp  2x">
                 <source type="image/webp" srcset="img/montage_desktop.webp, img/montage_desktop@2.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/montage_mobile.jpg, img/montage_mobile@2.jpg 2x">
                 <source media="(max-width: 1023px)" srcset="img/montage_tablet.jpg, img/montage_tablet@2.jpg 2x">
 
                 <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/montage_desktop.jpg" srcset="img/montage_desktop@2.jpg" alt="Фото монтажа печатной платы" width="370" height="620">
+                <img src="img/montage_desktop.jpg" srcset="img/montage_desktop@2.jpg" alt="Фото монтажа печатной платы"
+                  width="370" height="620">
               </picture>
             </a>
           </li>
@@ -195,14 +202,17 @@
                 Комплектующие для светотехники
               </p>
               <picture>
-                <source media="(max-width: 767px)" type="image/webp" srcset="img/components_mobile.webp, img/components_mobile@2.webp 2x">
-                <source media="(max-width: 1023px)" type="image/webp" srcset="img/components_tablet.webp, img/components_tablet@2.webp 2x">
+                <source media="(max-width: 767px)" type="image/webp"
+                  srcset="img/components_mobile.webp, img/components_mobile@2.webp 2x">
+                <source media="(max-width: 1023px)" type="image/webp"
+                  srcset="img/components_tablet.webp, img/components_tablet@2.webp 2x">
                 <source type="image/webp" srcset="img/components_desktop.webp, img/components_desktop@2.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/components_mobile.jpg, img/components_mobile@2.jpg 2x">
                 <source media="(max-width: 1023px)" srcset="img/components_tablet.jpg, img/components_tablet@2.jpg 2x">
 
                 <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/components_desktop.jpg" srcset="img/components_desktop@2.jpg" alt="Фото световой ленты" width="370" height="620">
+                <img src="img/components_desktop.jpg" srcset="img/components_desktop@2.jpg" alt="Фото световой ленты"
+                  width="370" height="620">
               </picture>
             </a>
           </li>
@@ -221,10 +231,10 @@
           </p>
           <ul class="form__list">
             <li class="form__item">
-              <input type="text" name="text" required="" placeholder="Имя" aria-label="Введите Ваше Имя">
+              <input type="text" name="text" required placeholder="Имя" aria-label="Введите Ваше Имя">
             </li>
             <li class="form__item">
-              <input type="tel" name="tel" required="" placeholder="Телефон" aria-label="Введите Ваш номер телефона">
+              <input type="tel" name="tel" required placeholder="Телефон" aria-label="Введите Ваш номер телефона" max="10">
             </li>
 
             <li class="form__item form__item--textarea">
@@ -237,7 +247,7 @@
             </li>
             <li class="form__item form__item--checkbox">
               <label class="form__checkbox">
-                <input type="checkbox" checked="checked" name="data" required="">
+                <input type="checkbox" checked="checked" name="data" required>
                 <span class="form__check">
                   <svg width="10" height="10" aria-hidden="true">
                     <use xlink:href="img/sprite_auto.svg#icon_check"></use>
@@ -339,7 +349,8 @@
               </ul>
             </li>
           </ul>
-          <button class="footer__button footer__button--navigation " aria-label="открыть/закрыть сисок" type="button"></button>
+          <button class="footer__button footer__button--navigation " aria-label="открыть/закрыть сисок"
+            type="button"></button>
         </section>
         <section class="footer__section footer__adress adress">
           <h3 class="footer__title adress__title">
@@ -367,7 +378,8 @@
               </a>
             </li>
           </ul>
-          <button class="footer__button footer__button--adress" aria-label="открыть/закрыть сисок" type="button"></button>
+          <button class="footer__button footer__button--adress" aria-label="открыть/закрыть сисок"
+            type="button"></button>
         </section>
       </div>
       <div class="footer__bottom copyright">
@@ -378,7 +390,8 @@
         <span class="copyright__text copyright__text--service">
           1999-2018 SD Service Devices
         </span>
-        <a class="copyright__link copyright__link--confidentiality" href="#" aria-label="Политика обработки персональных данных">
+        <a class="copyright__link copyright__link--confidentiality" href="#"
+          aria-label="Политика обработки персональных данных">
           Условия конфиденциальности
         </a>
         <a class="copyright__link" href="#" aria-label="Ссылка на странцицу web студии разработавшей сайт">
@@ -399,10 +412,10 @@
         </p>
         <ul class="form__list form__list--modal">
           <li class="form__item">
-            <input type="text" name="text" required="" placeholder="Имя" aria-label="Введите Ваше Имя">
+            <input type="text" name="text" required placeholder="Имя" aria-label="Введите Ваше Имя">
           </li>
           <li class="form__item">
-            <input type="tel" name="tel" required="" placeholder="Телефон" aria-label="Введите Ваш номер телефона">
+            <input type="tel" name="tel" required placeholder="Телефон" aria-label="Введите Ваш номер телефона">
           </li>
           <li class="form__item form__item--modal-textarea">
             <textarea name="subject" placeholder="Ваш вопрос"></textarea>
@@ -414,7 +427,7 @@
           </li>
           <li class="form__item form__item--checkbox">
             <label class="form__checkbox form__checkbox--modal">
-              <input type="checkbox" checked="checked" name="data" required="">
+              <input type="checkbox" checked="checked" name="data" required>
               <span class="form__check">
                 <svg width="10" height="10" aria-hidden="true">
                   <use xlink:href="img/sprite_auto.svg#icon_check"></use>
@@ -422,14 +435,15 @@
               </span>
               Я согласен на обработку персональных данных
             </label>
-        </li></ul>
+        </ul>
       </form>
-      <button class="form__button form__button--modal" aria-label="открыть/закрыть модальное окно" type="button"></button>
+      <button class="form__button form__button--modal" aria-label="открыть/закрыть модальное окно"
+        type="button"></button>
     </section>
   </div>
 
 
-  <script src="js/script.js" type="module"></script>
+  <script src="js/main.min.js" type="module"></script>
 
 
 </body>
