@@ -2,11 +2,11 @@
   background-color: $blacklight;
   padding-bottom: 120px;
 
-  @media(max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     padding-bottom: 78px;
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding-bottom: 64px;
   }
 }
@@ -21,13 +21,13 @@
   margin-bottom: 47px;
   padding-left: 28px;
 
-  @media(max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     font-size: 32px;
     line-height: 45px;
     padding-left: 0;
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     font-size: 28px;
     line-height: 40px;
     margin-bottom: 37px;
@@ -40,15 +40,21 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 45px;
+  grid-gap: 20px;
 
-  @media(max-width: $desktop-width) {
+
+  @media (max-width: $desktop-width) {
     grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px;
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     grid-gap: 30px;
   }
+}
+
+.production__item {
+  overflow: hidden;
 }
 
 .production__link {
@@ -58,12 +64,13 @@
 
   &:hover,
   &:focus {
-    opacity: 0.7;  }
+    opacity: 0.7;
+  }
 
   &::after {
     content: "";
     position: absolute;
-    background-image: url(../img/arrow.svg);
+    background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
     width: 63px;
     height: 63px;
@@ -86,24 +93,24 @@
   padding-left: 44px;
   padding-right: 130px;
 
-  @media(max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     width: 100%;
     min-height: 256px;
     padding-right: 460px;
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding-left: 34px;
     padding-right: 60px;
   }
-
 }
 
 img {
   position: absolute;
-  bottom:0px;
+  bottom: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   z-index: 5;
   opacity: 0.5;
 }

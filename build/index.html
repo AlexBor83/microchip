@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Printed circuit boards</title>
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -138,11 +141,15 @@
             Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
             года. Выполняем срочные заказы и пилотные образцы до 10 дней.
           </p>
-          <p class="about-company__text">
+          <p class="about-company__text about-company__text--desctop">
             Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
             платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
             РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
             светотехники России.
+          </p>
+          <p class="about-company__text about-company__text--tablet">
+            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
+            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог...
           </p>
           <a class="button about-company__button" href="#" aria-label="Подробнее о компании умные технологии">
             Подробнее
@@ -234,7 +241,8 @@
               <input type="text" name="text" required placeholder="Имя" aria-label="Введите Ваше Имя">
             </li>
             <li class="form__item">
-              <input type="tel" name="tel" required placeholder="Телефон" aria-label="Введите Ваш номер телефона" max="10">
+              <input type="tel" name="tel" maxlength="10" required placeholder="Телефон"
+                aria-label="Введите Ваш номер телефона">
             </li>
 
             <li class="form__item form__item--textarea">
@@ -401,8 +409,8 @@
     </div>
   </footer>
 
-  <div class="wrap">
-    <section class="form form--modal form--modal-closed">
+  <div class="modal modal-closed">
+    <section class="form form--modal">
       <form action="https://echo.htmlacademy.ru" method="POST">
         <h2 class="form__title form__title--modal">
           Закажите звонок
@@ -412,10 +420,11 @@
         </p>
         <ul class="form__list form__list--modal">
           <li class="form__item">
-            <input type="text" name="text" required placeholder="Имя" aria-label="Введите Ваше Имя">
+            <input type="text" class="login" name="text" required placeholder="Имя" aria-label="Введите Ваше Имя">
           </li>
           <li class="form__item">
-            <input type="tel" name="tel" required placeholder="Телефон" aria-label="Введите Ваш номер телефона">
+            <input type="tel" name="tel" minlength="17" required placeholder="Телефон"
+              aria-label="Введите Ваш номер телефона">
           </li>
           <li class="form__item form__item--modal-textarea">
             <textarea name="subject" placeholder="Ваш вопрос"></textarea>
@@ -442,10 +451,7 @@
     </section>
   </div>
 
-
   <script src="js/main.min.js" type="module"></script>
-
-
 </body>
 
 </html>

@@ -1,28 +1,28 @@
 .intro {
   background-color: $greydark;
-  background-image: url(../img/header_desktop.jpg);
+  background-image: url("../img/header_desktop.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
 
   @media (min-resolution: $retina-dpi-2) {
-    background-image: url(../img/header_desktop@2.jpg);
+    background-image: url("../img/header_desktop@2.jpg");
   }
 
   @media (max-width: $desktop-width) {
-    background-image: url(../img/header_tablet.jpg);
+    background-image: url("../img/header_tablet.jpg");
 
     @media (min-resolution: $retina-dpi-2) {
-      background-image: url(../img/header_tablet@2.jpg);
+      background-image: url("../img/header_tablet@2.jpg");
     }
   }
 
   @media (max-width: $tablet-width) {
-    background-image: url(../img/header_mobile.jpg);
+    background-image: url("../img/header_mobile.jpg");
 
     @media (min-resolution: $retina-dpi-2) {
-      background-image: url(../img/header_mobile@2.jpg);
+      background-image: url("../img/header_mobile@2.jpg");
     }
   }
 }
@@ -142,6 +142,7 @@
 
   &--mobile {
     display: none;
+
     @media (max-width: $tablet-width) {
       display: flex;
     }

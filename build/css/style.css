@@ -315,8 +315,8 @@ body {
 .container__company,
 .container__production,
 .container__form {
-  padding-left: 125px;
-  padding-right: 125px;
+  padding-left: 25px;
+  padding-right: 25px;
   padding-top: 109px;
 }
 
@@ -356,8 +356,8 @@ body {
 }
 
 .intro {
-  background-color: #1B2D37;
-  background-image: url(../img/header_desktop.jpg);
+  background-color: #1b2d37;
+  background-image: url("../img/header_desktop.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -417,13 +417,13 @@ body {
   -ms-flex-align: center;
   align-items: center;
   margin-left: 94px;
-  background-color: #00B2FF;
+  background-color: #00b2ff;
   height: 55px;
   padding-left: 10px;
   padding-right: 10px;
   font-size: 16px;
   line-height: 19px;
-  border-color: #00B2FF;
+  border-color: #00b2ff;
 }
 
 .intro__button--mobile {
@@ -487,7 +487,7 @@ body {
 }
 
 .company {
-  background-image: url(../img/triangles.png);
+  background-image: url("../img/triangles.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -508,22 +508,22 @@ body {
 
 .advantages__item {
   min-height: 300px;
-  border: 1px solid #EBEBEB;
-  border-left: 3px solid #00B2FF;
+  border: 1px solid #ebebeb;
+  border-left: 3px solid #00b2ff;
   cursor: pointer;
   padding: 40px 20px 23px 45px;
 }
 
 .advantages__item:focus,
 .advantages__item:hover {
-  border: 1px solid #00B2FF;
-  background-color: #00B2FF;
+  border: 1px solid #00b2ff;
+  background-color: #00b2ff;
   color: #ffffff;
 }
 
 .advantages__title {
   font-family: "RobotoCondensed", "Arial", sans-serif;
-  color: #00B2FF;
+  color: #00b2ff;
   font-size: 24px;
   line-height: 34px;
   margin: 0;
@@ -537,7 +537,7 @@ body {
 }
 
 svg {
-  fill: #00B2FF;
+  fill: #00b2ff;
 }
 
 .advantages__item:focus svg,
@@ -554,11 +554,12 @@ svg {
 .about-company::before {
   content: "";
   position: absolute;
-  background-image: url(../img/date_desktop.png);
+  background-image: url("../img/date_desktop.png");
   background-repeat: no-repeat;
   width: 220px;
   height: 317px;
   left: 0;
+  bottom: -10px;
 }
 
 .about-company__title {
@@ -574,9 +575,13 @@ svg {
   padding-top: 0;
 }
 
+.about-company__text--tablet {
+  display: none;
+}
+
 .about-company__button {
-  color: #00B2FF;
-  border: 1px solid #00B2FF;
+  color: #00b2ff;
+  border: 1px solid #00b2ff;
   height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -591,7 +596,7 @@ svg {
 }
 
 .production {
-  background-color: #1B2D37;
+  background-color: #1b2d37;
   padding-bottom: 120px;
 }
 
@@ -614,7 +619,11 @@ svg {
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 45px;
+  grid-gap: 20px;
+}
+
+.production__item {
+  overflow: hidden;
 }
 
 .production__link {
@@ -636,7 +645,7 @@ svg {
 .production__link::after {
   content: "";
   position: absolute;
-  background-image: url(../img/arrow.svg);
+  background-image: url("../img/arrow.svg");
   background-repeat: no-repeat;
   width: 63px;
   height: 63px;
@@ -661,42 +670,52 @@ svg {
 
 img {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   z-index: 5;
   opacity: 0.5;
 }
 
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .form {
-  background-color: #00B2FF;
+  background-color: #00b2ff;
 }
 
 .form--section {
-  background-image: url(../img/background_form_desktop.jpg);
+  background-image: url("../img/background_form_desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
 }
 
 .form--modal {
-  width: 50%;
+  width: 490px;
   padding: 33px 39px;
   color: #ffffff;
   margin: 0 auto;
   position: fixed;
   left: 50%;
-  top: 40%;
+  top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  z-index: 20;
+  z-index: 100;
 }
 
-.form--modal-closed {
+.modal-closed {
   display: none;
 }
 
-.form--modal-show {
+.modal-show {
   display: block;
 }
 
@@ -715,7 +734,7 @@ img {
 .form--section form::before {
   position: absolute;
   content: "";
-  background-image: url(../../img/paper_airplane.svg);
+  background-image: url("../../img/paper_airplane.svg");
   background-repeat: no-repeat;
   width: 511px;
   height: 290px;
@@ -842,10 +861,6 @@ img {
   min-height: 104px;
 }
 
-.form__button {
-  width: 100%;
-}
-
 .form__checkbox {
   position: relative;
   font-size: 14px;
@@ -872,11 +887,10 @@ img {
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px;
-  left: 0px;
+  left: 0;
 }
 
 .form__check svg {
-  stroke: #ffffff;
   position: absolute;
   left: 50%;
   top: 55%;
@@ -891,6 +905,10 @@ img {
 
 .form__checkbox input:checked + .form__check svg {
   stroke: #ffffff;
+}
+
+.form__button {
+  width: 100%;
 }
 
 .form__button--modal {
@@ -927,13 +945,12 @@ img {
 }
 
 .form__error {
-  border: red;
   -webkit-box-shadow: 0 0 2px 2px red;
   box-shadow: 0 0 2px 2px red;
 }
 
 .footer {
-  color: #1B2D37;
+  color: #1b2d37;
   position: relative;
 }
 
@@ -1044,7 +1061,7 @@ img {
 }
 
 .navigation__link {
-  color: #1B2D37;
+  color: #1b2d37;
 }
 
 .navigation__link:hover,
@@ -1058,7 +1075,7 @@ img {
   font-size: 15px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #1B2D37;
+  color: #1b2d37;
   margin-top: 0;
   margin-bottom: 30px;
 }
@@ -1077,7 +1094,7 @@ img {
 }
 
 .adress__link {
-  color: #1B2D37;
+  color: #1b2d37;
 }
 
 .adress__link:hover,
@@ -1102,7 +1119,7 @@ img {
 }
 
 .copyright__link {
-  color: #1B2D37;
+  color: #1b2d37;
 }
 
 .copyright__link--confidentiality {
@@ -1116,7 +1133,7 @@ img {
 
 @media (max-width: 1023px) {
   .container {
-    max-width: 740px;
+    max-width: 100%;
   }
 
   .container__company,
@@ -1137,7 +1154,7 @@ img {
   }
 
   .intro {
-    background-image: url(../img/header_tablet.jpg);
+    background-image: url("../img/header_tablet.jpg");
   }
 
   .intro__header {
@@ -1198,9 +1215,17 @@ img {
   }
 
   .about-company::before {
-    background-image: url(../img/date_tablet.png);
+    background-image: url("../img/date_tablet.png");
     width: 251px;
     height: 362px;
+  }
+
+  .about-company__text--tablet {
+    display: block;
+  }
+
+  .about-company__text--desctop {
+    display: none;
   }
 
   .production {
@@ -1216,6 +1241,7 @@ img {
   .production__list {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px;
   }
 
   .production__text {
@@ -1233,8 +1259,7 @@ img {
   }
 
   .form--section form {
-    width: 590px;
-    margin: 0 auto;
+    width: 100%;
   }
 
   .form--section form::before {
@@ -1311,7 +1336,11 @@ img {
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
   .intro {
-    background-image: url(../img/header_tablet@2.jpg);
+    background-image: url("../img/header_tablet@2.jpg");
+  }
+
+  .form--section {
+    background-image: none;
   }
 }
 
@@ -1323,7 +1352,6 @@ img {
 
 @media (max-width: 767px) {
   .container {
-    max-width: 320px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -1342,7 +1370,7 @@ img {
   }
 
   .intro {
-    background-image: url(../img/header_mobile.jpg);
+    background-image: url("../img/header_mobile.jpg");
   }
 
   .intro__content {
@@ -1419,10 +1447,6 @@ img {
   .production__text {
     padding-left: 34px;
     padding-right: 60px;
-  }
-
-  .form--section form {
-    width: 100%;
   }
 
   .form__title {
@@ -1536,25 +1560,28 @@ img {
 
   .copyright__link--confidentiality {
     margin: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
   }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
   .intro {
-    background-image: url(../img/header_mobile@2.jpg);
+    background-image: url("../img/header_mobile@2.jpg");
   }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .intro {
-    background-image: url(../img/header_desktop@2.jpg);
+    background-image: url("../img/header_desktop@2.jpg");
   }
 
   .company {
-    background-image: url(../img/triangles@2.png);
+    background-image: url("../img/triangles@2.png");
   }
 
   .form--section {
-    background-image: url(../img/background_form_desktop@2.jpg);
+    background-image: url("../img/background_form_desktop@2.jpg");
   }
 }

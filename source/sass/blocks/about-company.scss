@@ -14,14 +14,15 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url(../img/date_desktop.png);
+    background-image: url("../img/date_desktop.png");
     background-repeat: no-repeat;
     width: 220px;
     height: 317px;
     left: 0;
+    bottom: -10px;
 
     @media (max-width: $desktop-width) {
-      background-image: url(../img/date_tablet.png);
+      background-image: url("../img/date_tablet.png");
       width: 251px;
       height: 362px;
     }
@@ -43,6 +44,20 @@
 
 .about-company__text {
   padding-top: 0;
+
+  &--tablet {
+    display: none;
+  }
+
+  @media (max-width: $desktop-width) {
+    &--tablet {
+      display: block;
+    }
+
+    &--desctop {
+      display: none;
+    }
+  }
 }
 
 .about-company__button {

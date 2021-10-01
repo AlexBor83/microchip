@@ -4,12 +4,11 @@
   padding-right: 20px;
   margin: 0 auto;
 
-  @media(max-width: $desktop-width) {
-    max-width: 740px;
+  @media (max-width: $desktop-width) {
+    max-width: 100%;
   }
 
-  @media(max-width: $tablet-width) {
-    max-width: 320px;
+  @media (max-width: $tablet-width) {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -18,27 +17,27 @@
 .container__company,
 .container__production,
 .container__form {
-  padding-left: 125px;
-  padding-right: 125px;
+  padding-left: 25px;
+  padding-right: 25px;
   padding-top: 109px;
 
-  @media(max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 50px;
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 38px;
   }
 }
 
-.container__production{
+.container__production {
   padding-top: 93px;
 
-  @media(max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     padding-top: 53px;
   }
 }
@@ -47,12 +46,12 @@
   padding-top: 96px;
   padding-bottom: 113px;
 
-  @media(max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     padding-top: 83px;
     padding-bottom: 103px;
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding-top: 33px;
     padding-bottom: 40px;
   }

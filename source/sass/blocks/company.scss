@@ -1,12 +1,11 @@
 .company {
-  background-image: url(../img/triangles.png);
+  background-image: url("../img/triangles.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
 
   @media (min-resolution: $retina-dpi-2) {
-    background-image: url(../img/triangles@2.png);
+    background-image: url("../img/triangles@2.png");
   }
-
 }
