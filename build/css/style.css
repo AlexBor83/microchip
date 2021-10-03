@@ -312,19 +312,19 @@ body {
   margin: 0 auto;
 }
 
-.container__company,
-.container__production,
-.container__form {
+.container--company,
+.container--production,
+.container--form {
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 109px;
 }
 
-.container__production {
+.container--production {
   padding-top: 93px;
 }
 
-.container__form {
+.container--form {
   padding-top: 96px;
   padding-bottom: 113px;
 }
@@ -1136,19 +1136,19 @@ img {
     max-width: 100%;
   }
 
-  .container__company,
-  .container__production,
-  .container__form {
+  .container--company,
+  .container--production,
+  .container--form {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 50px;
   }
 
-  .container__production {
+  .container--production {
     padding-top: 53px;
   }
 
-  .container__form {
+  .container--form {
     padding-top: 83px;
     padding-bottom: 103px;
   }
@@ -1356,15 +1356,15 @@ img {
     padding-right: 15px;
   }
 
-  .container__company,
-  .container__production,
-  .container__form {
+  .container--company,
+  .container--production,
+  .container--form {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 38px;
   }
 
-  .container__form {
+  .container--form {
     padding-top: 33px;
     padding-bottom: 40px;
   }

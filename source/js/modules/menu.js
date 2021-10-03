@@ -26,8 +26,6 @@ const clouseFooterMenu = () => {
   });
 };
 
-clouseFooterMenu();
-
 const togglerFooterMenu = () => {
   if (!footerSection) {
     return;
@@ -47,4 +45,4 @@ const togglerFooterMenu = () => {
   });
 };
 
-togglerFooterMenu();
+export {clouseFooterMenu, togglerFooterMenu};

@@ -1,3 +1,5 @@
+// import {loadLocalStorage} from './validate.js';
+
 const buttonOpendForm = document.querySelector('.header__button');
 const modal = document.querySelector('.modal');
 const body = document.querySelector('body');
@@ -15,6 +17,7 @@ const openModal = () => {
   modal.classList.remove('modal-closed');
   modal.classList.add('modal-show');
   modalLogin.focus();
+  // loadLocalStorage(); если включаю то отключается маска телефона
   body.classList.add('fixed-page');
 };
 
@@ -46,12 +49,5 @@ const togglerModal = () => {
   });
 };
 
-// const sendForm = () => {
-//   modal.addEventListener('submit', () => {
-//     if (!form.noValidate) {
-
-//     }
-//   });
-// };
 
 export {togglerModal};

@@ -14,9 +14,9 @@
   }
 }
 
-.container__company,
-.container__production,
-.container__form {
+.container--company,
+.container--production,
+.container--form {
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 109px;
@@ -34,7 +34,7 @@
   }
 }
 
-.container__production {
+.container--production {
   padding-top: 93px;
 
   @media (max-width: $desktop-width) {
@@ -42,7 +42,7 @@
   }
 }
 
-.container__form {
+.container--form {
   padding-top: 96px;
   padding-bottom: 113px;
 
