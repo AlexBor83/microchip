@@ -1,31 +1,31 @@
-// import {loadLocalStorage} from './validate.js';
 
-const buttonOpendForm = document.querySelector('.header__button');
-const modal = document.querySelector('.modal');
-const body = document.querySelector('body');
-const buttonClosedForm = document.querySelector('.form__button--modal');
-const modalLogin = modal.querySelector('.login');
-// const form = modal.querySelector('form');
 
-const closedModal = () => {
-  modal.classList.remove('modal-show');
-  body.classList.remove('fixed-page');
-  modal.classList.add('modal-closed');
-};
+const toggleModal = () => {
 
-const openModal = () => {
-  modal.classList.remove('modal-closed');
-  modal.classList.add('modal-show');
-  modalLogin.focus();
-  // loadLocalStorage(); если включаю то отключается маска телефона
-  body.classList.add('fixed-page');
-};
+  const modal = document.querySelector('.modal');
 
-const togglerModal = () => {
   if (!modal) {
     return;
   }
-  buttonOpendForm.addEventListener('click', () => {
+
+  const buttonOpenForm = document.querySelector('.header__button');
+  const body = document.querySelector('body');
+  const buttonClosedForm = document.querySelector('.form__button--modal');
+  const modalLogin = modal.querySelector('input[type="text"]');
+
+  const closedModal = () => {
+    modal.classList.remove('modal-show');
+    body.classList.remove('fixed-page');
+    modal.classList.add('modal-closed');
+  };
+
+  const openModal = () => {
+    modal.classList.remove('modal-closed');
+    modal.classList.add('modal-show');
+    modalLogin.focus();
+    body.classList.add('fixed-page');
+  };
+  buttonOpenForm.addEventListener('click', () => {
     if (modal.classList.contains('modal-closed')) {
       openModal();
 
@@ -50,4 +50,4 @@ const togglerModal = () => {
 };
 
 
-export {togglerModal};
+export {toggleModal};

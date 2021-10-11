@@ -1,13 +1,16 @@
-const modal = document.querySelector('.form--modal');
-const form = modal.querySelector('form');
-const inputText = form.querySelector('input[type="text"]');
-const inputTel = form.querySelector('input[type="tel"]');
-const inputTextarea = form.querySelector('textarea');
+
 
 const saveLocalStorage = () => {
+
+  const modal = document.querySelector('.form--modal');
+  const form = modal.querySelector('form');
+
   if (!form) {
     return;
   }
+  const inputText = form.querySelector('input[type="text"]');
+  const inputTel = form.querySelector('input[type="tel"]');
+  const inputTextarea = form.querySelector('textarea');
 
   form.addEventListener('submit', () => {
     localStorage.setItem('name', inputText.value);
@@ -16,10 +19,4 @@ const saveLocalStorage = () => {
   });
 };
 
-const loadLocalStorage = () => {
-  inputText.value = localStorage.getItem('name');
-  inputTel.value = localStorage.getItem('tel');
-  inputTextarea.value = localStorage.getItem('question');
-};
-
-export {saveLocalStorage, loadLocalStorage};
+export {saveLocalStorage};

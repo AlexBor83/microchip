@@ -1,5 +1,5 @@
 .footer {
-  color: $greydark;
+  color: $grey-dark;
   position: relative;
 
   &::after,
@@ -12,6 +12,10 @@
     opacity: 0.2;
     bottom: 60px;
 
+    @media (max-width: $desktop-width) {
+      bottom: 62px;
+    }
+
     @media (max-width: $tablet-width) {
       bottom: 83px;
     }
@@ -22,11 +26,11 @@
 
     @media (max-width: $desktop-width) {
       content: "";
-      top: 100px;
+      top: 96px;
     }
 
     @media (max-width: $tablet-width) {
-      top: 200px;
+      top: 260px;
       box-shadow: 0 300px 0 0 $grey;
     }
   }
@@ -35,17 +39,22 @@
 .footer__top {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-gap: 20px;
-  padding-top: 60px;
-  margin-bottom: 50px;
+  grid-gap: 130px;
+  padding-top: 65px;
+  margin-bottom: 57px;
 
   @media (max-width: $desktop-width) {
     grid-template-columns: repeat(2, 1fr);
     padding-top: 20px;
+    row-gap: 8px;
+    column-gap: 30px;
+    margin-bottom: 34px;
   }
 
   @media (max-width: $tablet-width) {
     grid-template-columns: repeat(1, 1fr);
+    padding-top: 45px;
+    row-gap: 31px;
   }
 }
 
@@ -55,7 +64,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: relative;
     margin-bottom: 50px;
   }
 
@@ -68,7 +76,32 @@
 .footer__logo {
   @media (max-width: $tablet-width) {
     align-self: center;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__text {
+  &--tablet {
+    display: none;
+
+    @media (max-width: $desktop-width) {
+      display: block;
+      text-transform: uppercase;
+      font-size: 13px;
+      line-height: 24px;
+      opacity: 0.5;
+      align-self: center;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.footer__social {
+  @media (max-width: $desktop-width) {
+    align-self: center;
   }
 }
 
@@ -83,6 +116,7 @@
   @media (max-width: $tablet-width) {
     justify-self: start;
     width: 100%;
+    padding-right: 10px;
   }
 }
 
@@ -119,15 +153,16 @@
       opacity: 0.1;
     }
   }
-}
 
-.footer__button--clouse {
-  @media (max-width: $tablet-width) {
-    &::after {
-      transform: rotate(90deg);
+  &--clouse {
+    @media (max-width: $tablet-width) {
+      &::after {
+        transform: rotate(90deg);
+      }
     }
   }
 }
+
 
 .footer__button:focus.footer__title,
 .footer__button:hover .footer__title {

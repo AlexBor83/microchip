@@ -6,53 +6,54 @@
 
   @media (max-width: $desktop-width) {
     max-width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   @media (max-width: $tablet-width) {
     padding-left: 15px;
     padding-right: 15px;
   }
-}
 
-.container--company,
-.container--production,
-.container--form {
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 109px;
+  &--company,
+  &--production,
+  &--form {
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-top: 108px;
 
-  @media (max-width: $desktop-width) {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 50px;
+    @media (max-width: $desktop-width) {
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-top: 50px;
+    }
+
+    @media (max-width: $tablet-width) {
+      padding-left: 14px;
+      padding-right: 15px;
+      padding-top: 38px;
+    }
   }
 
-  @media (max-width: $tablet-width) {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 38px;
-  }
-}
+  &--production {
+    padding-top: 74px;
 
-.container--production {
-  padding-top: 93px;
-
-  @media (max-width: $desktop-width) {
-    padding-top: 53px;
-  }
-}
-
-.container--form {
-  padding-top: 96px;
-  padding-bottom: 113px;
-
-  @media (max-width: $desktop-width) {
-    padding-top: 83px;
-    padding-bottom: 103px;
+    @media (max-width: $desktop-width) {
+      padding-top: 51px;
+    }
   }
 
-  @media (max-width: $tablet-width) {
-    padding-top: 33px;
-    padding-bottom: 40px;
+  &--form {
+    padding-top: 91px;
+    padding-bottom: 110px;
+
+    @media (max-width: $desktop-width) {
+      padding: 80px 88px 103px;
+    }
+
+    @media (max-width: $tablet-width) {
+      padding-top: 33px;
+      padding-bottom: 34px;
+    }
   }
 }

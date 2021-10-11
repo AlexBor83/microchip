@@ -9,13 +9,13 @@ const showFooterMenuItem = (i) => {
   footerButtons[i].classList.remove('footer__button--clouse');
 };
 
-const clouseFooterMenuItem = (i) => {
+const closeFooterMenuItem = (i) => {
   footerLists[i].classList.add('close-menu');
   footerLists[i].classList.remove('open-menu');
   footerButtons[i].classList.add('footer__button--clouse');
 };
 
-const clouseFooterMenu = () => {
+const closeFooterMenu = () => {
   footerLists.forEach((i) => {
     i.classList.add('close-menu');
     i.classList.remove('open-menu');
@@ -26,7 +26,7 @@ const clouseFooterMenu = () => {
   });
 };
 
-const togglerFooterMenu = () => {
+const toggleFooterMenu = () => {
   if (!footerSection) {
     return;
   }
@@ -35,14 +35,14 @@ const togglerFooterMenu = () => {
 
       if (evt.target === item) {
         if (footerLists[number].classList.contains('close-menu')) {
-          clouseFooterMenu();
+          closeFooterMenu();
           showFooterMenuItem(number);
         } else {
-          clouseFooterMenuItem(number);
+          closeFooterMenuItem(number);
         }
       }
     });
   });
 };
 
-export {clouseFooterMenu, togglerFooterMenu};
+export {closeFooterMenu, toggleFooterMenu};

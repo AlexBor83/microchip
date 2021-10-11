@@ -15,7 +15,7 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0 40px;
+  margin: 0 50px;
   padding: 0;
 
   @media (max-width: $desktop-width) {
@@ -24,7 +24,7 @@
 }
 
 .header__item {
-  margin-right: 80px;
+  margin-right: 102px;
 
   &:last-child {
     margin-right: 0;
@@ -33,15 +33,23 @@
   @media (max-width: $desktop-width) {
     margin-right: 33px;
   }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 24px;
+  }
 }
 
 .header__link {
-  color: $wight;
+  color: $white;
 
   &:hover,
   &:focus {
     opacity: 0.5;
   }
+}
+
+.header__button {
+  max-width: 400px;
 }
 
 .header__text,

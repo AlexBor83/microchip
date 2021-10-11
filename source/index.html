@@ -17,7 +17,7 @@
   <div class="intro">
     <div class="container">
       <header class="intro__header header">
-        <a class="header__logo logo" aria-label="Логотип компании умные технологии">
+        <a class="header__logo logo">
           <svg class="header__svg header__svg--all" width="202" height="52" aria-hidden="true">
             <use xlink:href="img/sprite_auto.svg#icon_logo_desktop"></use>
           </svg>
@@ -54,26 +54,44 @@
               </a>
             </li>
           </ul>
-          <button class="header__button button" type="button" aria-label="Показать форму заказа обратного звонка">
+          <a class="header__button button" aria-label="Заказать звонок">
             Заказать звонок
-          </button>
+          </a>
         </div>
       </header>
-      <section class="intro__content">
-        <h1 class="intro__title">
-          Печатные платы
-        </h1>
-        <p class="intro__text">
-          производство и монтаж, поставка комплектующих, блоков и модулей
-        </p>
-        <a class="button intro__button js-trigger-link" href="#formSection" aria-label="Кнопка для получения бесплатной консультаци">
-          Получить бесплатную консультацию
-        </a>
-        <a class="button intro__button intro__button--mobile" href="#formSection"
-          aria-label="Кнопка для получения бесплатной консультаци">
-          Бесплатная консультация
-        </a>
-      </section>
+      <div class="intro__wrap">
+        <section class="intro__content">
+          <h1 class="intro__title">
+            Печатные платы
+          </h1>
+          <p class="intro__text">
+            производство и монтаж, поставка комплектующих, блоков и модулей
+          </p>
+          <a class="button intro__button js-trigger-link" href="#formSection"
+            aria-label="Кнопка для получения бесплатной консультаци">
+            Получить бесплатную консультацию
+          </a>
+          <a class="button intro__button intro__button--mobile" href="#formSection">
+            Бесплатная консультация
+          </a>
+        </section>
+        <div class="intro__img">
+          <picture>
+            <source media="(max-width: 767px)" type="image/webp"
+              srcset="img/board_mobile.webp, img/board_mobile@2.webp 2x">
+            <source media="(max-width: 1023px)" type="image/webp"
+              srcset="img/board_tablet.webp, img/board_tablet@2.webp 2x">
+            <source type="image/webp" srcset="img/board_desctop.webp, img/board_desctop@2.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/board_mobile.png, img/board_mobile@2.png 2x">
+            <source media="(max-width: 1023px)" srcset="img/board_tablet.png, img//board_tablet@2.jpg 2x">
+
+            <!-- 1х: 705px; 2x: 1410px -->
+            <img src="img/board_desctop.png" srcset="img/board_desctop@2.png" alt="Печатные платы" width="705"
+              height="515">
+          </picture>
+        </div>
+      </div>
+
     </div>
   </div>
   <main>
@@ -147,11 +165,7 @@
             РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
             светотехники России.
           </p>
-          <p class="about-company__text about-company__text--tablet">
-            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
-            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог...
-          </p>
-          <a class="button about-company__button" href="#" aria-label="Подробнее о компании умные технологии">
+          <a class="button about-company__button" href="#">
             Подробнее
           </a>
         </section>
@@ -164,7 +178,7 @@
         </h2>
         <ul class="production__list">
           <li class="production__item">
-            <a class="production__link" href="#" aria-label="Производство печатных плат">
+            <a class="production__link" href="#">
               <p class="production__text">
                 Производство печатных плат
               </p>
@@ -184,7 +198,7 @@
             </a>
           </li>
           <li class="production__item">
-            <a class="production__link" href="#" aria-label="Монтаж печатных плат">
+            <a class="production__link" href="#">
               <p class="production__text">
                 Монтаж печатных плат
               </p>
@@ -204,7 +218,7 @@
             </a>
           </li>
           <li class="production__item">
-            <a class="production__link" href="#" aria-label="Комплектующие для светотехники">
+            <a class="production__link" href="#">
               <p class="production__text">
                 Комплектующие для светотехники
               </p>
@@ -229,7 +243,7 @@
 
     <div class="form form--section" id="formSection">
       <div class="container container--form">
-        <form action="https://echo.htmlacademy.ru" method="POST">
+        <form method="POST">
           <h2 class="form__title">
             Остались вопросы? Задайте их нам!
           </h2>
@@ -277,11 +291,14 @@
           <h3 class="visually-hidden">
             Визитка компании умные технологии
           </h3>
-          <a class="footer__logo logo" aria-label="Логотип компании умные технологии">
+          <a class="footer__logo logo">
             <svg width="220" height="52" aria-hidden="true">
               <use xlink:href="img/sprite_auto.svg#icon_logo_footer"></use>
             </svg>
           </a>
+          <span class="footer__text footer__text--tablet">
+            1999-2018 SD Service Devices
+          </span>
           <div class="footer__social social">
             <ul class="social__list">
               <li class="social__item">
@@ -316,22 +333,22 @@
             <li>
               <ul class="navigation__wrap">
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#" aria-label="ссылка на разделы сайта">
+                  <a class="navigation__link" href="#">
                     О компании
                   </a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#" aria-label="ссылка на разделы сайта">
+                  <a class="navigation__link" href="#">
                     Продукты
                   </a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#" aria-label="ссылка на разделы сайта">
+                  <a class="navigation__link" href="#">
                     Производство печатных плат
                   </a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#" aria-label="ссылка на разделы сайта">
+                  <a class="navigation__link" href="#">
                     Монтаж печатных плат
                   </a>
                 </li>
@@ -340,17 +357,17 @@
             <li>
               <ul class=" navigation__wrap">
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#" aria-label="ссылка на разделы сайта">
+                  <a class="navigation__link" href="#">
                     Комплектующие
                   </a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#" aria-label="ссылка на разделы сайта">
+                  <a class="navigation__link" href="#">
                     Доставка
                   </a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#" aria-label="ссылка на разделы сайта">
+                  <a class="navigation__link" href="#">
                     Контакты
                   </a>
                 </li>
@@ -395,7 +412,7 @@
         <span class="copyright__text copyright__text--rights">
           Все права защищены
         </span>
-        <span class="copyright__text copyright__text--service">
+        <span class="copyright__text copyright__text--service copyright__text--desctop">
           1999-2018 SD Service Devices
         </span>
         <a class="copyright__link copyright__link--confidentiality" href="#"
@@ -411,7 +428,7 @@
 
   <div class="modal modal-closed">
     <section class="form form--modal">
-      <form  action="https://echo.htmlacademy.ru" method="POST">
+      <form method="POST">
         <h2 class="form__title form__title--modal">
           Закажите звонок
         </h2>
@@ -420,7 +437,7 @@
         </p>
         <ul class="form__list form__list--modal">
           <li class="form__item">
-            <input type="text" class="login" name="text" required placeholder="Имя" aria-label="Введите Ваше Имя">
+            <input type="text" name="text" required placeholder="Имя" aria-label="Введите Ваше Имя">
           </li>
           <li class="form__item">
             <input type="tel" name="tel" minlength="17" required placeholder="Телефон"

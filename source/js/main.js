@@ -1,16 +1,14 @@
 
 import {initPhoneMask} from './modules/phone-mask.js';
-import {togglerModal} from './modules/modal.js';
-import {togglerFooterMenu, clouseFooterMenu} from './modules/menu.js';
+import {toggleModal} from './modules/modal.js';
+import {toggleFooterMenu, closeFooterMenu} from './modules/menu.js';
 import {saveLocalStorage} from './modules/validate.js';
 
 initPhoneMask();
-togglerModal();
-clouseFooterMenu();
-togglerFooterMenu();
+toggleModal();
+closeFooterMenu();
+toggleFooterMenu();
 saveLocalStorage();
 
-import {initInnerLinks} from './modules/scroll.js';
+import {initInnerLinks} from './vendor.js';
 initInnerLinks();
-//
-//

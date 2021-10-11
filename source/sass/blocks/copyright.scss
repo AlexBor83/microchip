@@ -16,19 +16,13 @@
 }
 
 .copyright__text {
-  margin-right: 60px;
+  margin-right: 80px;
 
-  @media (max-width: $desktop-width) {
-    &--service {
-      position: absolute;
-      left: 55%;
-      top: 35px;
-      transform: translateX(-50%);
-      margin-right: 0;
-    }
+  &--service {
+    margin-right: 160px;
 
-    @media (max-width: $tablet-width) {
-      top: 100px;
+    @media (max-width: $desktop-width) {
+      display: none;
     }
   }
 
@@ -40,7 +34,7 @@
 }
 
 .copyright__link {
-  color: $greydark;
+  color: $grey-dark;
 
   &--confidentiality {
     margin-right: auto;

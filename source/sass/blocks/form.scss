@@ -4,11 +4,15 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $dlacK-opasity;
+  background-color: $blacK-opasity;
+  z-index: 200;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .form {
   background-color: $blue;
+  resize: none;
 
   &--section {
     background-image: url("../img/background_form_desktop.jpg");
@@ -32,13 +36,12 @@
   &--modal {
     width: 490px;
     padding: 33px 39px;
-    color: $wight;
+    color: $white;
     margin: 0 auto;
-    position: fixed;
+    position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
+    transform: translate(-50%, -30%);
 
     @media (max-width: $desktop-width) {
       display: none;
@@ -61,7 +64,7 @@
 
 .form--section form {
   width: 570px;
-  color: $wight;
+  color: $white;
   margin-left: auto;
   position: relative;
 
@@ -76,8 +79,8 @@
     background-repeat: no-repeat;
     width: 511px;
     height: 290px;
-    top: 70px;
-    left: -600px;
+    top: 71px;
+    left: -626px;
 
     @media (max-width: $desktop-width) {
       content: none;
@@ -96,6 +99,7 @@
   @media (max-width: $desktop-width) {
     font-size: 32px;
     line-height: 45px;
+    margin-bottom: 15px;
   }
 
   @media (max-width: $tablet-width) {
@@ -112,7 +116,7 @@
 
 .form__text {
   margin: 0;
-  margin-bottom: 49px;
+  margin-bottom: 53px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 20px;
@@ -130,10 +134,16 @@
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  row-gap: 40px;
+  column-gap: 30px;
+
+  @media (max-width: $desktop-width) {
+    row-gap: 45px;
+  }
 
   @media (max-width: $tablet-width) {
     grid-template-columns: repeat(1, 1fr);
+    row-gap: 31px;
   }
 
   &--modal {
@@ -154,18 +164,24 @@
 .form__item input,
 .form__item textarea {
   width: 100%;
-  background-color: $bluelight;
+  background-color: $blue-light;
   border: none;
   padding-left: 16px;
-  color: $wight;
+  color: $white;
+  resize: none;
 
   &::placeholder {
     font-size: 16px;
     line-height: 22px;
-    color: $wight;
+    color: $white;
     opacity: 1;
     padding-bottom: 16px;
     font-family: $font-family--PT_Mono;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 2px 2px $hover-form;
   }
 }
 
@@ -176,6 +192,10 @@
 .form__item textarea {
   min-height: 154px;
   padding-top: 16px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 104px;
+  }
 }
 
 .form__item--modal-textarea textarea {
@@ -186,7 +206,8 @@
   position: relative;
   font-size: 14px;
   line-height: 16px;
-  padding-left: 20px;
+  padding-left: 40px;
+  padding-top: 5px;
   display: block;
   cursor: pointer;
 
@@ -204,11 +225,12 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  border: 1px solid $wight;
+  border: 1px solid $white;
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px;
-  left: 0;
+  left: 7px;
+  top: 6px;
 }
 
 .form__check svg {
@@ -217,6 +239,7 @@
   top: 55%;
   transform: translate(-50%, -50%);
   stroke: transparent;
+  fill: none;
 }
 
 .form__checkbox input {
@@ -224,7 +247,7 @@
 }
 
 .form__checkbox input:checked + .form__check svg {
-  stroke: $wight;
+  stroke: $white;
 }
 
 .form__button {
@@ -245,7 +268,7 @@
     &::after {
       content: "";
       position: absolute;
-      background-color: $wight;
+      background-color: $white;
       width: 16px;
       height: 1px;
       top: 10px;
@@ -258,6 +281,11 @@
 
     &::before {
       transform: rotate(-45deg);
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
     }
   }
 }

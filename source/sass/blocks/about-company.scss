@@ -1,14 +1,16 @@
 .about-company {
   padding-left: 180px;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 110px;
 
   @media (max-width: $desktop-width) {
-    padding-left: 200px;
+    padding-left: 190px;
+    margin-bottom: 83px;
   }
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
+    margin-bottom: 52px;
   }
 
   &::before {
@@ -18,13 +20,15 @@
     background-repeat: no-repeat;
     width: 220px;
     height: 317px;
-    left: 0;
-    bottom: -10px;
+    left: -28px;
+    bottom: -16px;
 
     @media (max-width: $desktop-width) {
       background-image: url("../img/date_tablet.png");
       width: 251px;
       height: 362px;
+      left: -20px;
+      bottom: -8px;
     }
 
     @media (max-width: $tablet-width) {
@@ -40,23 +44,31 @@
   margin: 0;
   font-weight: 400;
   margin-bottom: 18px;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 39px;
+  }
 }
 
 .about-company__text {
-  padding-top: 0;
-
-  &--tablet {
-    display: none;
-  }
+  margin: 0;
+  margin-bottom: 20px;
 
   @media (max-width: $desktop-width) {
-    &--tablet {
-      display: block;
-    }
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 
-    &--desctop {
-      display: none;
-    }
+  @media (max-width: $tablet-width) {
+    -webkit-line-clamp: 8;
+    margin-bottom: 38px;
   }
 }
 
@@ -68,4 +80,5 @@
   width: 180px;
   justify-content: center;
   align-items: center;
+  margin-top: 41px;
 }

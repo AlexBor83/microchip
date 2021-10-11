@@ -6,6 +6,10 @@
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 30px;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 25px;
+  }
 }
 
 .navigation__list {
@@ -17,7 +21,7 @@
   opacity: 0.5;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-gap: 20px;
+  grid-gap: 40px;
 
   @media (max-width: $desktop-width) {
     grid-template-columns: repeat(1, auto);
@@ -32,7 +36,7 @@
 
 
 .navigation__link {
-  color: $greydark;
+  color: $grey-dark;
 
   &:hover,
   &:focus {
